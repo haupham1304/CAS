@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-
 <html>
 <!-- Page header -->
 
@@ -26,12 +26,10 @@
         <article class="table">
             <div class="table-content">
                 <div class="content">
-                    <a class="signin" href="signin.php">
+                    <a class="signin" href="../cas/signin.php?id=2">
                         Đăng Nhập
                     </a>
-                    <a class="signup" href="signup.php">
-                        Đăng Ký
-                    </a>
+                    <a class="signup" href="signup.php">Đăng Ký</a>
                 </div>
             </div>
         </article>

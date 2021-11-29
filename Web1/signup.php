@@ -47,8 +47,9 @@ require_once ('dbhelp.php');
 			$s_pass = md5($s_pass);
 			$sql = "insert into user(id, fullname, email, username, password) value('', '$s_fname', '$s_email', '$s_user', '$s_pass')";
 			execute($sql);
-            echo '<script type="text/javascript">alert("Đăng ký tài khoản thành công")</script>';
-			header('Location: signin.php');
+			echo '<script type="text/javascript">alert("Đăng ký tài khoản thành công");',
+				 'window.location = "../cas/signin.php?id=1";',
+				 '</script>';
 			die();
 		}
 	

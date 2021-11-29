@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<?php session_start(); ?>
 
+<!DOCTYPE html>
 <html>
 <!-- Page header -->
 
@@ -24,12 +25,17 @@
         <article class="table">
             <div class="table-content">
                 <div class="content">
-                    <a class="signin" href="signin.php">
-                        Đăng Nhập
-                    </a>
-                    <a class="signup" href="signup.php">
-                        Đăng Ký
-                    </a>
+                <?php
+                    $link = '';
+                    if (!empty($_SESSION)) {
+                        $link = "signin.php";
+                    }
+                    else {
+                        $link = "../cas/signin.php?id=1";
+                    }
+                    echo '<a class="signin" href="'.$link.'">Đăng Nhập</a>';
+                ?>
+                    <a class="signup" href="signup.php">Đăng Ký</a>
                 </div>
             </div>
         </article>
