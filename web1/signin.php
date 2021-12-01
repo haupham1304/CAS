@@ -31,7 +31,6 @@
 		}
 	}
 	else {
-		echo $_SESSION['user'];
 		if (isset($_SESSION)) {
 			if (isset($_SESSION['user'])) {
 				$u = $_SESSION['user'];
